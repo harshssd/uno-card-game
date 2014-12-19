@@ -1,0 +1,24 @@
+import java.util.HashSet;
+
+
+public class Deck {
+
+	HashSet<Card> cards;
+	
+	public Deck() {
+		cards = new HashSet<Card>();
+		for(int i = 0; i < 10; i++){
+			cards.add(new Card(i, CardColor.BLUE, SpecialCardType.NONE));
+			cards.add(new Card(i, CardColor.GREEN, SpecialCardType.NONE));
+			cards.add(new Card(i, CardColor.RED, SpecialCardType.NONE));
+			cards.add(new Card(i, CardColor.YELLOW, SpecialCardType.NONE));
+		}
+		for(int i = 0; i < 4; i++){
+			cards.add(new Card(, CardColor.BLUE, SpecialCardType.NONE));
+			cards.add(new Card(i, CardColor.GREEN, SpecialCardType.NONE));
+			cards.add(new Card(i, CardColor.RED, SpecialCardType.NONE));
+			cards.add(new Card(i, CardColor.YELLOW, SpecialCardType.NONE));
+		}
+	}
+	
+}

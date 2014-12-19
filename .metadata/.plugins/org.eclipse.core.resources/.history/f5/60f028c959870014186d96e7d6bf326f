@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+
+
+public class Player {
+
+	HashSet<Card> cardsInHand;
+
+	public Player() {
+		this.cardsInHand = new HashSet<Card>();
+	}
+	
+	public void addCards(ArrayList<Card> cards){
+		this.cardsInHand.addAll(cards);
+	}
+	
+	
+}

@@ -1,0 +1,6 @@
+
+public enum Special_Card_Type {
+
+	PLUS_2, PLUS_4, SKIP, REVERSE
+	
+}

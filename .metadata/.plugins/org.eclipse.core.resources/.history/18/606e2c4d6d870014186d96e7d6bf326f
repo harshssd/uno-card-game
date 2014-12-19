@@ -1,0 +1,92 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Game {
+
+	private static int numberOfPlayers;
+	private static Player[] players;
+	private static ArrayList<Card> cardsStack;
+	private static Card topCard;
+	private static Player currentTurn;
+	
+	public static void main(String args[]){
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter number of players");
+        while(scanner.hasNext()){
+        	try{
+        		numberOfPlayers = Integer.parseInt(scanner.next());
+        		break;
+        	}catch(NumberFormatException n){
+        		System.out.println("Please enter a number");
+        	}
+        }
+    	System.out.println("There are "+numberOfPlayers+ " Players");
+    	
+    	createPlayers();
+    	
+    	createCardStack();
+    	
+    	distributeCards();
+    
+    	while(true){
+    		for(Player player: players){
+    			currentTurn = player;
+    			play(player);
+    			if(player.isWinner()){
+    				System.out.println("Player " + "<Player Name>"+ "Wins");
+    			}
+    		}
+    	}
+    	
+	}
+	
+	
+	private static void play(Player player) {
+		System.out.println("Top card is : ");
+		topCard.printCard();
+		System.out.println("");
+		System.out.println("You have the following cards :");
+		for(Card card: player.cardsInHand){
+			
+		}
+	}
+
+
+	private static void createCardStack() {
+		double numberOfStacks = Math.ceil(numberOfPlayers/2);
+		while(numberOfStacks>0){
+			cardsStack.addAll(new Deck().getCards());
+			--numberOfStacks;
+		}
+	}
+
+
+	private static void distributeCards() {
+		int cardsPerPlayer = 7;
+		while(cardsPerPlayer>0){
+			for(Player player: players){
+				int index = (int)Math.random()*cardsStack.size();
+				player.cardsInHand.add(cardsStack.remove(index));
+			}
+			--cardsPerPlayer;
+		}
+		topCard = cardsStack.remove(0);
+	}
+
+
+	private static void createPlayers() {
+		int count = 0;
+		while(count<numberOfPlayers){
+			players[count] = new Player();
+			++count;
+		}
+	}
+
+	
+	
+	
+	
+}

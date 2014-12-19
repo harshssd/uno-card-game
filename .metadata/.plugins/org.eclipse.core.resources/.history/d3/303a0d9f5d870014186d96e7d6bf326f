@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Game {
+
+	private int numberOfPlayers;
+	private Card[] Player;
+	private ArrayList<Card> cardsStack;
+	private Card topCard;
+	private Player currentTurn;
+	
+	public static void main(String args[]){
+		System.out.println("Enter number of players");
+        String name = sc.nextLine();
+	}
+	
+}

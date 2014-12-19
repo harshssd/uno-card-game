@@ -1,0 +1,12 @@
+import java.util.HashSet;
+
+
+public class Player {
+
+	HashSet<Card> cards;
+
+	public Player() {
+		cards = new HashSet<Card>();
+	}
+	
+}

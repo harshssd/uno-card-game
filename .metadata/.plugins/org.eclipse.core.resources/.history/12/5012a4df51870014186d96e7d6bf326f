@@ -1,0 +1,12 @@
+
+public class Card {
+
+	private int number;
+	private Card_Color color;
+	
+	public Card(int n, Card_Color c) {
+		this.number = n;
+		this.color = c;
+	}
+	
+}

@@ -1,0 +1,37 @@
+
+public class Card {
+
+	private int number;
+	private CardColor color;
+	private Special_Card_Type speciality;
+	
+	public Card(int n, CardColor c) {
+		this.number = n;
+		this.color = c;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public CardColor getColor() {
+		return color;
+	}
+
+	public void setColor(CardColor color) {
+		this.color = color;
+	}
+
+	public Special_Card_Type getSpeciality() {
+		return speciality;
+	}
+
+	public void setSpeciality(Special_Card_Type speciality) {
+		this.speciality = speciality;
+	}
+	
+}
