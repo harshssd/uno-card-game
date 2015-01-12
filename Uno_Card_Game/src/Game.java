@@ -120,7 +120,7 @@ public class Game {
 	private static void distributeCards() {
 		while(cardsPerPlayer>0){
 			for(Player player: players){
-				int index = (int)Math.random()*cardsStack.size();
+				int index = (int)(Math.random()*cardsStack.size());
 				player.cardsInHand.add(cardsStack.remove(index));
 			}
 			--cardsPerPlayer;
