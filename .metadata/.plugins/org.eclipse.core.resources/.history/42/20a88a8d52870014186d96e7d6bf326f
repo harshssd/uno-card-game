@@ -1,6 +1,0 @@
-
-public enum Card_Color {
-
-	RED, GREEN, BLUE, YELLOW, WILD
-	
-}
